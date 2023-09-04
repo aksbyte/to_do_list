@@ -77,9 +77,9 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.transparent,
       extendBodyBehindAppBar: true,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.white.withOpacity(0.3),
+        backgroundColor: Colors.white,
         onPressed: createNewTask,
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.add, color: Colors.green,),
       ),
       drawer: const CustomDrawer(),
       appBar: AppBar(
@@ -101,16 +101,16 @@ class _MyHomePageState extends State<MyHomePage> {
         width: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/theme_photos/theme1.jpg'),
+              image: AssetImage('assets/theme_photos/theme3.jpg'),
               fit: BoxFit.cover),
           //color: themes.backgroundThemes[selectedTheme],
         ),
         child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaY: 10.0, sigmaX: 10.0),
+          filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
           child: Container(
             height: double.infinity,
             width: double.infinity,
-            decoration: BoxDecoration(color: Colors.white.withOpacity(0.1)),
+            decoration: BoxDecoration(color: Colors.white.withOpacity(0.2)),
             child: ListView.builder(
               itemCount: db.toDoList.length,
               itemBuilder: (context, index) {

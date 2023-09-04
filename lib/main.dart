@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
               title: 'To-Do app',
             ),
             theme: ThemeData(
+              unselectedWidgetColor: Colors.white,
               primaryColor: Colors.white,
               textTheme: const TextTheme(
                 displayLarge: TextStyle(color: Colors.white),

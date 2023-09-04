@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
 class ToDoTile extends StatelessWidget {
@@ -25,29 +26,34 @@ class ToDoTile extends StatelessWidget {
           children: [
             SlidableAction(onPressed: deleteFunction,
             icon: Icons.delete,
-              backgroundColor: Colors.red.withOpacity(0.3),
-              borderRadius: BorderRadius.circular(10),
+              backgroundColor: Colors.red.withOpacity(0.6),
+              borderRadius: BorderRadius.circular(10.sp),
             ),
           ],
         ),
         child: Container(
-          padding: const EdgeInsets.all(25.0),
+          padding: EdgeInsets.all(25.0.sp),
           decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(10)),
+              borderRadius: BorderRadius.circular(10.sp)),
           child: Row(
             children: [
               Checkbox(
                 value: taskCompleted,
                 onChanged: onChanged,
-                activeColor: Colors.white54,
-                checkColor: Colors.red.shade400,
+                activeColor: Colors.white,
+                checkColor: Colors.green.shade400,
               ),
-              Text(taskName,
-                style: TextStyle(
-                    decoration: taskCompleted
-                        ? TextDecoration.lineThrough
-                        : TextDecoration.none),
+              Expanded(
+                child: Text(taskName,
+                  style: TextStyle(
+                      decoration: taskCompleted
+                          ? TextDecoration.lineThrough
+                          : TextDecoration.none, fontSize: 12.sp),
+                  softWrap: false,
+                  maxLines: 5,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ],
           ),

@@ -21,7 +21,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
         decoration: const BoxDecoration(
           //gradient: Chroma.gradient,
             image: DecorationImage(
-                image: AssetImage('assets/theme_photos/theme1.jpg'),
+                image: AssetImage('assets/theme_photos/theme3.jpg'),
                 fit: BoxFit.fill),
         ),
         child: BackdropFilter(
@@ -42,7 +42,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                         decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                            image: AssetImage('assets/theme_photos/aks.jpg'),
+                            image: AssetImage('assets/theme_photos/user.png'),
                             fit: BoxFit.contain,
                           ),
                         ),
